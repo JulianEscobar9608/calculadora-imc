@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="./estilos/estilo.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" id ="cont-formulario">
+        <h1 id="titular">
+            CALCULADORA IMC</h1>
+        <form id="formulario" style="padding-bottom: 5px;">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="hombre"
+                    checked>
+                <label for="mas">Masculino</label>
+                <i class="bi bi-gender-male"></i>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                    value="mujer">
+                    <label for="mas">Femenino</label>
+                <i class="bi bi-gender-female"></i>
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad</label>
+                <input required="true" min=1 type="number" class="form-control" id="edad"
+                    aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="peso">Peso en KG</label>
+                <input required="true" type="number" min=10 class="form-control" id="peso">
+            </div>
+            <div class="form-group">
+                <label for="altura1">Altura en Centímetros</label>
+                <input required="true" min=20 type="number" class="form-control" id="altura" aria-describedby="emailHelp">
+            </div>
+            <br>
+            <button type="submit" id="envio" class="btn btn-primary">Calcular IMC</button>
+            
+        <button  id="limpiar" class="btn btn-primary">Limpiar</button>
+        </form>
+    </div>
+
+    <div class="container" id="respuesta"
+        style=>
+        <h1 style="text-align: center; margin: 10px">Resultado</h1>
+        <h3 class="base">Su resultado aquí</h3>
+        <table style="background-color: beige; border-radius: 10px; border-color: black; border-style: double;"></table>
+       <h4>Indicadores por colores: </h4>
+        <tbody>
+            <tr>
+                <td>
+                    <div
+                        style="display: inline-block; width: 25px; height: 25px; background-color: rgb(51, 51, 194); border-radius: 10px; margin: 10px 10px;">
+                    </div>
+                </td>
+                <td>
+                    <h4>Bajo de peso</h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div
+                        style="display: inline-block; width: 25px; height: 25px; background-color: rgb(19, 199, 43); border-radius: 10px; margin: 10px 10px;">
+                    </div>
+                </td>
+                <td>
+                    <h4>Saludable</h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div
+                        style="display: inline-block; width: 25px; height: 25px; background-color: rgb(250, 236, 36); border-radius: 10px; margin: 10px 10px;">
+                    </div>
+                </td>
+                <td>
+                    <h4>Exceso de peso</h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div
+                        style="display: inline-block; width: 25px; height: 25px; background-color: rgb(196, 13, 13); border-radius: 10px; margin: 10px 10px;">
+                    </div>
+                </td>
+                <td>
+                    <h4>Obeso</h4>
+                </td>
+            </tr>
+        </tbody>
+
+    </div>
+
+    <br><br><br>
+    <h2 style="margin-left: 25px;"id="contador"></h2>
+    <br>
+    <h1 style="text-align: center;">Estadísticas</h1>
+    <br>
+    <button id="graficoMujeres" class="btn btn-primary" style="margin: 50px">Ver gráfica Mujeres</button>
+    <button id="graficoHombres" class="btn btn-primary" style="margin: 50px">Ver gráfica Hombres</button>
+    
+
+    <div id="barras" style="height: 250px;"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src="./scripts/main.js" ></script>
+    <script src="./scripts/estadistica.js" type="module"></script>
+</body>
+
+</html>

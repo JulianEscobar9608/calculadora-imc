@@ -1,0 +1,65 @@
+
+
+body{
+    background-image: url("../assets/fondo.jpg");
+}
+
+
+.azul{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.rojo{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.verde{
+    background-color: yellowgreen;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.amarillo{
+    background-color: yellow;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.base{
+    background-color: rgb(91, 91, 187); 
+    color: wheat; 
+    text-align: center;
+    border-radius: 10px;
+}
+
+#cont-formulario{
+    display: inline-block; 
+    background-color: rgb(90, 201, 201);
+    width: 45%; 
+    border-radius: 15px;
+    margin: 15px 20px;
+}
+
+#titular{
+    background-color: rgb(91, 91, 187);
+    margin: 10px; 
+    color: cornsilk; 
+    border-radius: 10px; 
+    text-align: center;
+}
+
+#respuesta{
+    display: inline-block; 
+    background-color: rgb(90, 201, 201); 
+    width: 45%; 
+    border-radius: 15px; 
+    margin: 15px 20px;
+}
